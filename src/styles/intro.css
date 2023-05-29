@@ -62,3 +62,7 @@ body {
       transform: rotateX(25deg) translateZ(-2500px);
     }
   }
+
+  .overflow-hidden {
+    overflow: hidden;
+  }
