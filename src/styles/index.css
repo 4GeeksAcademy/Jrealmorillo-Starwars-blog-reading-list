@@ -2,27 +2,25 @@
     General Styles
 */
 
-
-
 .scroll-container {
-    max-height: 45em;
+    max-height: 45rem;
     overflow: auto;
-
   }
 
 
 body {
 
   font-family: 'Poller One';
-  font-size: 12px;                                              
+  font-size: 12px;   
+  background-color: black;
+                                           
 }
 
-#app {
+ #app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background-color: black;
-}
+} 
 
 
   
