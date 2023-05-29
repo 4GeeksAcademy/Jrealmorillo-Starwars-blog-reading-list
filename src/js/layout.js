@@ -3,12 +3,19 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./views/home";
-import { Demo } from "./views/demo";
-import { Single } from "./views/single";
 import injectContext from "./store/appContext";
+import yoda from '../img/yoda.png';
+import stars from '../img/bg-stars.png';
+
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
+import { CharacterDetails } from "./views/characterDetails";
+import { PlanetDetails } from "./views/planetDetails";
+import { VehicleDetails } from "./views/vehicleDetails";
+
+
+  
 
 //create your first component
 const Layout = () => {
@@ -16,15 +23,22 @@ const Layout = () => {
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
 	const basename = process.env.BASENAME || "";
 
-	return (
-		<div>
+	const layoutStyle = {
+		backgroundImage: `url(${stars})`, // Establece la imagen de fondo
+		backgroundSize: "cover", // Ajusta el tamaño de la imagen para cubrir toda la página
+		backgroundPosition: "center", // Centra la imagen de fondo
+	};
+	
+	  return (
+		<div style={layoutStyle}>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
 					<Routes>
 						<Route path="/" element={<Home />} />
-						<Route path="/demo" element={<Demo />} />
-						<Route path="/single/:theid" element={<Single />} />
+						<Route path="/character/:uid" element={<CharacterDetails/>}/>
+						<Route path="/planets/:uid" element={<PlanetDetails/>}/>
+						<Route path="/vehicles/:uid" element={<VehicleDetails/>}/>
 						<Route path="*" element={<h1>Not found!</h1>} />
 					</Routes>
 					<Footer />

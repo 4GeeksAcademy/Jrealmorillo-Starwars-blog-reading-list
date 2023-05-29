@@ -1,3 +1,28 @@
 /* 
     General Styles
 */
+
+
+
+.scroll-container {
+    max-height: 45em;
+    overflow: auto;
+
+  }
+
+
+body {
+
+  font-family: 'Poller One';
+  font-size: 12px;                                              
+}
+
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+
+  
