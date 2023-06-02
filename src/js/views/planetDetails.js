@@ -21,7 +21,7 @@ export const PlanetDetails = () => {
 
         <div className="card mx-auto border border-danger border-3 text-white" style={{ backgroundImage: `url(${stars})`, width: "72rem", height: "36rem" }}>
             <div className="row g-0 d-flex align-items-center">
-                <div className="col-md-4">
+                <div className="col-4">
                 <img
                         src={params.uid === "1" ? tatooine : `https://starwars-visualguide.com/assets/img/planets/${params.uid}.jpg`}
                         className="img-fluid"
@@ -29,7 +29,7 @@ export const PlanetDetails = () => {
                         style={{ width: "18rem", height: "18rem" }}
                     />
                 </div>
-                <div className="col-md-8">
+                <div className="col-8">
                     <div className="card-body">
                         <h4 className="card-title">{store.planet?.name}</h4>
                         <p className="card-text">Apparently this should include some information about {store.planet?.name} itself but, to be honest with you, I could not find any suitable content so here it goes some well deserved....Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. If you have made it untill here you are a real star!</p>
